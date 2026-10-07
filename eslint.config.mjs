@@ -1,5 +1,8 @@
+import tseslint from "typescript-eslint"
+
 export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts,tsx}"],
+    ignores: ["**/node_modules/**", "**/dist/**", "**/.turbo/**"],
   },
+  ...tseslint.configs.recommended,
 ]

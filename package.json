@@ -9,6 +9,7 @@
     "docs:check-readmes": "node scripts/check-readmes.mjs",
     "format": "prettier --write .",
     "lint": "turbo lint",
+    "majestic": "tsx packages/cli/src/index.ts",
     "prepare": "husky",
     "preview": "pnpm --filter @majestic/docs preview",
     "test": "turbo test",
@@ -25,6 +26,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
     "prettier": "^3.0.0",
+    "typescript-eslint": "^8.46.0",
+    "tsx": "^4.19.2",
     "turbo": "^2.0.0",
     "typescript": "^5.0.0",
     "vitest": "^3.0.0"

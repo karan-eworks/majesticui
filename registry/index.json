@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "families": {
+    "button": {
+      "name": "button",
+      "type": "component",
+      "title": "Button",
+      "description": "Normal MajesticUI button variants.",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "version": "1.0.0",
+          "contract": "majestic.button.v1",
+          "client": false,
+          "files": [
+            {
+              "source": "button/default/button.tsx",
+              "target": "{{ui}}/button.tsx",
+              "type": "component"
+            }
+          ]
+        },
+        "shadcn": {
+          "version": "1.0.0",
+          "contract": "majestic.button.v1",
+          "client": false,
+          "dependencies": {
+            "npm": ["@radix-ui/react-slot", "class-variance-authority"]
+          },
+          "files": [
+            {
+              "source": "button/shadcn/button.tsx",
+              "target": "{{ui}}/button.tsx",
+              "type": "component"
+            }
+          ]
+        },
+        "animated": {
+          "version": "1.0.0",
+          "contract": "majestic.button.v1",
+          "client": true,
+          "dependencies": { "npm": ["framer-motion"] },
+          "styles": [
+            {
+              "source": "button/animated/button.css",
+              "target": "{{styles}}/majestic/button.css",
+              "mode": "copy",
+              "scope": "component"
+            }
+          ],
+          "files": [
+            {
+              "source": "button/animated/button.tsx",
+              "target": "{{ui}}/button.tsx",
+              "type": "component"
+            }
+          ]
+        },
+        "glass": {
+          "version": "1.0.0",
+          "contract": "majestic.button.v1",
+          "client": false,
+          "styles": [
+            {
+              "source": "button/glass/button.css",
+              "target": "{{styles}}/majestic/button.css",
+              "mode": "copy",
+              "scope": "component"
+            }
+          ],
+          "files": [
+            {
+              "source": "button/glass/button.tsx",
+              "target": "{{ui}}/button.tsx",
+              "type": "component"
+            }
+          ]
+        },
+        "gradient": {
+          "version": "1.0.0",
+          "contract": "majestic.button.v1",
+          "client": false,
+          "files": [
+            {
+              "source": "button/gradient/button.tsx",
+              "target": "{{ui}}/button.tsx",
+              "type": "component"
+            }
+          ]
+        },
+        "icon": {
+          "version": "1.0.0",
+          "contract": "majestic.button.v1",
+          "client": false,
+          "dependencies": { "npm": ["lucide-react"] },
+          "files": [
+            {
+              "source": "button/icon/button.tsx",
+              "target": "{{ui}}/button.tsx",
+              "type": "component"
+            }
+          ]
+        },
+        "enterprise": {
+          "version": "1.0.0",
+          "contract": "majestic.button.v1",
+          "client": false,
+          "files": [
+            {
+              "source": "button/enterprise/button.tsx",
+              "target": "{{ui}}/button.tsx",
+              "type": "component"
+            }
+          ]
+        }
+      }
+    },
+    "stateful-button": {
+      "name": "stateful-button",
+      "type": "component",
+      "title": "Stateful Button",
+      "description": "Interactive buttons with explicit state transitions.",
+      "defaultVariant": "default",
+      "variants": {
+        "default": {
+          "version": "1.0.0",
+          "contract": "majestic.stateful-button.v1",
+          "client": true,
+          "dependencies": {
+            "npm": ["xstate", "@xstate/react", "framer-motion", "lucide-react"],
+            "registry": ["button"]
+          },
+          "files": [
+            {
+              "source": "stateful-button/default/stateful-button.tsx",
+              "target": "{{ui}}/stateful-button.tsx",
+              "type": "component"
+            },
+            {
+              "source": "stateful-button/default/stateful-button-machine.ts",
+              "target": "{{lib}}/stateful-button-machine.ts",
+              "type": "utility"
+            }
+          ]
+        },
+        "spinner": {
+          "version": "1.0.0",
+          "contract": "majestic.stateful-button.v1",
+          "client": true,
+          "dependencies": {
+            "npm": ["framer-motion", "lucide-react"],
+            "registry": ["button"]
+          },
+          "files": [
+            {
+              "source": "stateful-button/spinner/stateful-button.tsx",
+              "target": "{{ui}}/stateful-button.tsx",
+              "type": "component"
+            }
+          ]
+        },
+        "progress": {
+          "version": "1.0.0",
+          "contract": "majestic.stateful-button.v1",
+          "client": true,
+          "dependencies": {
+            "npm": ["xstate", "@xstate/react", "framer-motion", "lucide-react"],
+            "registry": ["button"]
+          },
+          "files": [
+            {
+              "source": "stateful-button/progress/stateful-button.tsx",
+              "target": "{{ui}}/stateful-button.tsx",
+              "type": "component"
+            },
+            {
+              "source": "stateful-button/progress/stateful-button-machine.ts",
+              "target": "{{lib}}/stateful-button-machine.ts",
+              "type": "utility"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

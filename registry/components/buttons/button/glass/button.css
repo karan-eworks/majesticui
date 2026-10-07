@@ -1,0 +1,5 @@
+.majestic-button-glass {
+  border: 1px solid rgb(255 255 255 / 0.24);
+  background: rgb(255 255 255 / 0.1);
+  backdrop-filter: blur(12px);
+}

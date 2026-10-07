@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
-    "validate": "node -e \"console.log('Registry validation is not implemented yet.')\"",
-    "build:registry": "node -e \"console.log('Static registry build is not implemented yet.')\"",
+    "validate": "tsx src/validate.ts",
+    "build:registry": "tsx src/build.ts",
     "lint": "eslint .",
     "test": "vitest run --passWithNoTests",
     "typecheck": "tsc --noEmit"
