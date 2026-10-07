@@ -1,0 +1,15 @@
+{
+  "name": "@majestic/registry-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "validate": "node -e \"console.log('Registry validation is not implemented yet.')\"",
+    "build:registry": "node -e \"console.log('Static registry build is not implemented yet.')\"",
+    "dev": "tsc --noEmit --watch",
+    "lint": "eslint .",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  }
+}

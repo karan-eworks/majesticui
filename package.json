@@ -1,0 +1,38 @@
+{
+  "name": "majesticui",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "build": "turbo build",
+    "commitlint": "commitlint --edit",
+    "dev": "turbo dev",
+    "docs:check-readmes": "node scripts/check-readmes.mjs",
+    "format": "prettier --write .",
+    "lint": "turbo lint",
+    "prepare": "husky",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "registry:validate": "pnpm --filter @majestic/registry-core validate",
+    "registry:build": "pnpm --filter @majestic/registry-core build:registry"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.0.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": "prettier --write"
+  }
+}
