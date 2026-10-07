@@ -25,3 +25,4 @@ pnpm docs:check-readmes
 - Dependencies are selected per family/variant and deduplicated.
 - Styles, themes, assets, icons, and client directives are explicit metadata.
 - Locally modified files are never silently overwritten.
+# majesticui
